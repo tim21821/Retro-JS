@@ -1,0 +1,118 @@
+/* Master */
+body {
+    margin: 0px;
+    font-family: "Roboto", "sans-serif";
+}
+
+h1 {
+    color: lightseagreen;
+    margin-left: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* Navigationsleiste */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+}
+
+.left-side {
+    display: flex;
+}
+
+nav > .left-side > div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: 0.5s;
+}
+
+.nav-link a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid black;
+}
+
+.nav-link a:hover {
+    color:black;
+}
+
+/* Spiele-Index */
+
+.items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.item {
+    position: relative;
+}
+
+.img-background {
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.logo img {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+/* About-Seite */
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile-img {
+    text-align: center;
+}
+
+.profile-img img {
+    width: 100%;
+}
+
+.profile-text {
+    padding: 30px;
+}
+
+.two-column a:link {
+    color: lightseagreen;
+}
+
+.two-column a:visited {
+    color: seagreen;
+}
+
+/* Spiele-Seiten */
