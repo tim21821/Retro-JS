@@ -70,6 +70,22 @@ nav > .left-side > div {
     background-repeat: no-repeat;
 }
 
+#space_invaders {
+    background-image: url(images/Space_Invaders.png);
+}
+
+#pong {
+    background-image: url(images/Pong.png);
+}
+
+#tetris {
+    background-image: url(images/Tetris.png);
+}
+
+#snake {
+    background-image: url(images/Snake.png);
+}
+
 .img-text-wrapper {
     position: absolute;
     top: 0;
