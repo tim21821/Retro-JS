@@ -88,6 +88,11 @@ nav > .left-side > div {
     margin-bottom: 20px;
 }
 
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
+}
+
 /* About-Seite */
 
 .two-column {
