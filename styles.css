@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
 /* Master */
 body {
     margin: 0px;
@@ -109,6 +111,17 @@ nav > .left-side > div {
     filter: brightness(10%);
 }
 
+.subtitle {
+    transition: 1s;
+    font-weight: 500;
+    color: transparent;
+}
+
+.img-text-wrapper:hover .subtitle {
+    font-weight: 500;
+    color: lightseagreen;
+}
+
 /* About-Seite */
 
 .two-column {
@@ -126,6 +139,7 @@ nav > .left-side > div {
 
 .profile-text {
     padding: 30px;
+    font-weight: 300;
 }
 
 .two-column a:link {
