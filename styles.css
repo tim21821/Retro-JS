@@ -11,6 +11,10 @@ h1 {
     margin-left: 20px;
 }
 
+h2 {
+    color: #52e0d9;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -65,7 +69,7 @@ nav > .left-side > div {
 }
 
 .img-background {
-    height: 350px;
+    height: 375px;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -151,3 +155,14 @@ nav > .left-side > div {
 }
 
 /* Spiele-Seiten */
+
+.game-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.instruction-score-wrapper {
+    width: auto;
+    margin-left: 20px;
+}
