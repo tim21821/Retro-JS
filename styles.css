@@ -133,11 +133,11 @@ nav > .left-side > div {
     grid-template-columns: 1fr 1fr;
 }
 
-.profile-img {
+figure {
     text-align: center;
 }
 
-.profile-img img {
+figure img {
     width: 100%;
 }
 
