@@ -128,9 +128,9 @@ nav > .left-side > div {
 
 /* About-Seite */
 
-.two-column {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 figure {
@@ -138,7 +138,7 @@ figure {
 }
 
 figure img {
-    width: 100%;
+    width: min(100%, 600px);
 }
 
 .profile-text {
