@@ -73,7 +73,7 @@ nav > .left-side > div {
 }
 
 .img-background {
-    height: 375px;
+    height: 600px;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -96,7 +96,7 @@ nav > .left-side > div {
     background-image: url(images/Snake.png);
 }
 
-.img-text-wrapper {
+.logo-wrapper {
     position: absolute;
     top: 0;
     display: flex;
@@ -111,7 +111,7 @@ nav > .left-side > div {
 
 .logo img {
     width: 50%;
-    margin-bottom: 20px;
+    margin-bottom: auto;
 }
 
 .img-darken {
