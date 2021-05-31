@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
+/* Variablen */
+
+:root{
+    --nav-footer-padding: 38px;
+}
+
+
 /* Master */
 body {
     margin: 0px;
@@ -7,7 +14,7 @@ body {
 }
 
 h1 {
-    color: #1fb2ab;
+    color: lightseagreen;
     margin-left: 20px;
 }
 
@@ -18,13 +25,14 @@ h2 {
 .container {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
 }
 
 /* Navigationsleiste */
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 38px;
+    padding: var(--nav-footer-padding);
 }
 
 .left-side {
@@ -61,6 +69,14 @@ nav > .left-side > div {
     border-bottom: 1px solid #8a8a8a;
 }
 
+/* Fußleiste */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--nav-footer-padding);
+}
+
 /* Spiele-Index */
 
 .items {
@@ -70,6 +86,8 @@ nav > .left-side > div {
 
 .item {
     position: relative;
+    display: grid;
+    place-items: center;
 }
 
 .img-background {
@@ -105,8 +123,6 @@ nav > .left-side > div {
     align-items: center;
     height: 100%;
     text-align: center;
-    padding-left: 100px;
-    padding-right: 100px;
 }
 
 .logo img {
@@ -129,11 +145,6 @@ nav > .left-side > div {
     width: clamp(45ch, 100%, 75ch);
     text-align: center;
     margin: auto
-}
-
-.img-text-wrapper:hover .subtitle {
-    font-weight: 500;
-    color: lightseagreen;
 }
 
 /* About-Seite */
