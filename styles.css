@@ -7,7 +7,7 @@ body {
 }
 
 h1 {
-    color: lightseagreen;
+    color: #1fb2ab;
     margin-left: 20px;
 }
 
@@ -115,10 +115,16 @@ nav > .left-side > div {
     filter: brightness(10%);
 }
 
-.subtitle {
-    transition: 1s;
-    font-weight: 500;
-    color: transparent;
+.game_text {
+    text-align: center;
+}
+
+.game_text p {
+    font-weight: 300;
+    color: black;
+    width: clamp(45ch, 100%, 75ch);
+    text-align: center;
+    margin: auto
 }
 
 .img-text-wrapper:hover .subtitle {
