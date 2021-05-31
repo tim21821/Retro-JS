@@ -169,7 +169,9 @@ figure img {
 .profile-text {
     padding: 30px;
     font-weight: 300;
+    width: clamp(45ch, 100%, 75ch);
 }
+
 
 .two-column a:link {
     color: lightseagreen;
