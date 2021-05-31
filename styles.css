@@ -108,19 +108,19 @@ footer {
     background-repeat: no-repeat;
 }
 
-#space_invaders {
+#space-invaders-bg {
     background-image: url(images/Space_Invaders.png);
 }
 
-#pong {
+#pong-bg {
     background-image: url(images/Pong.png);
 }
 
-#tetris {
+#tetris-bg {
     background-image: url(images/Tetris.png);
 }
 
-#snake {
+#snake-bg {
     background-image: url(images/Snake.png);
 }
 
