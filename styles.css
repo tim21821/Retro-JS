@@ -189,7 +189,15 @@ figure img {
     justify-content: center;
 }
 
+.game {
+    margin-right: 15px;
+}
+
 .instruction-score-wrapper {
     width: auto;
     margin-left: 20px;
+}
+
+.instruction p {
+    width: clamp(45ch, 50%, 75ch);
 }
