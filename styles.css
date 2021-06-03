@@ -5,8 +5,12 @@
 
 :root{
     --nav-footer-padding: 38px;
-    --neon-color: hsl(317 100% 54%);
-    --neon-bg-color: hsl(323 21% 16%);
+    --neon-color: #ff14bd;
+    --neon-color2: #64baaa;
+    --neon-color3: #c4fcf0;
+    --neon-color4: #4c8076;
+    --neon-bg-color: #090909;
+    --text-color: #ffffff;
     --neon-font: "Balsamiq Sans";
     --text-font: "Roboto";
 }
@@ -20,18 +24,24 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: "Roboto", "sans-serif";
+    font-family: var(--text-font), "sans-serif";
     height: 100%;
     background: var(--neon-bg-color)
 }
 
 h1 {
-    color: lightseagreen;
+    color: var(--neon-color2);
     margin-left: 20px;
+    font-family: var(--neon-font), cursive;
 }
 
 h2 {
-    color: #52e0d9;
+    color: var(--neon-color3);
+    font-family: var(--neon-font), cursive;
+}
+
+p {
+    color: var(--text-color)
 }
 
 .container {
@@ -71,6 +81,7 @@ nav {
 }
 
 .nav-link::before {
+    pointer-events: none;
     content: "";
     position: absolute;
     background: var(--neon-color);
@@ -84,11 +95,31 @@ nav {
     opacity: 0.7;
 }
 
+.nav-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--neon-color);
+    opacity: 0;
+    transition: opacity 0.1s linear;
+    background-color: var(--neon-color);
+    z-index: -1;
+}
+
 .nav-link:hover, 
 .nav-link:focus {
-    background: var(--neon-color);
     color: var(--neon-bg-color);
     text-shadow: none;
+}
+
+.nav-link:hover::before,
+.nav-link:focus::before,
+.nav-link:hover::after,
+.nav-link:focus::after {
+    opacity: 1;
 }
 
 /* Fußleiste */
@@ -160,7 +191,6 @@ footer {
 
 .game_text p {
     font-weight: 300;
-    color: black;
     width: clamp(45ch, 100%, 75ch);
     margin: auto;
     text-align: justify;
