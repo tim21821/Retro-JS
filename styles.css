@@ -45,34 +45,23 @@ nav {
     display: flex;
 }
 
-nav > .left-side > div {
-    margin-right: 20px;
-    font-size: 0.9em;
-    text-transform: uppercase;
-}
-
 .nav-link {
-    height: 22px;
-    border-bottom: 1px solid transparent;
-    transition: 0.5s;
-}
+    margin-right: 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
 
-.nav-link a {
-    color: #8a8a8a;
+    color: var(--neon-color);
     text-decoration: none;
-    transition: 0.5s;
-}
+    font-family: var(--neon-font), cursive;
+    border: var(--neon-color) .125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
 
-.nav-link:hover {
-    border-bottom: 1px solid black;
-}
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--neon-color);
 
-.nav-link a:hover {
-    color:black;
-}
+    box-shadow: inset 0 0 0.5em 0 var(--neon-color), 0 0 0.5em 0 var(--neon-color);
 
-.active-nav-link {
-    border-bottom: 1px solid #8a8a8a;
+    position: relative;
 }
 
 /* Fußleiste */
