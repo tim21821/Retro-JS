@@ -50,18 +50,8 @@ nav {
     font-size: 1rem;
     text-transform: uppercase;
 
-    color: var(--neon-color);
     text-decoration: none;
-    font-family: var(--neon-font), cursive;
-    border: var(--neon-color) .125em solid;
-    padding: 0.25em 1em;
-    border-radius: 0.25em;
-
-    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--neon-color);
-
-    box-shadow: inset 0 0 0.5em 0 var(--neon-color), 0 0 0.5em 0 var(--neon-color);
-
-    position: relative;
+    color: #000000;
 }
 
 /* Fußleiste */
