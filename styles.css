@@ -9,7 +9,8 @@
     --neon-color2: #64baaa;
     --neon-color3: #c4fcf0;
     --neon-color4: #4c8076;
-    --neon-bg-color: #090909;
+    --light-bg-color: #090909;
+    --dark-bg-color: #000000;
     --text-color: #ffffff;
     --neon-font: "Balsamiq Sans";
     --text-font: "Roboto";
@@ -26,7 +27,7 @@ body {
     padding: 0;
     font-family: var(--text-font), "sans-serif";
     height: 100%;
-    background: var(--neon-bg-color)
+    background: var(--light-bg-color);
 }
 
 h1 {
@@ -34,6 +35,7 @@ h1 {
     margin-left: 20px;
     margin-bottom: 2em;
     font-family: var(--neon-font), cursive;
+    width: fit-content;
 
     border: currentColor .125em solid;
     padding: 0.25em 1em;
@@ -62,6 +64,8 @@ h1::before {
 h2 {
     color: var(--neon-color3);
     font-family: var(--neon-font), cursive;
+    width: fit-content;
+    margin-left: 20px;
 
     border: currentColor .125em solid;
     padding: 0.25em 1em;
@@ -267,19 +271,14 @@ figure img {
     width: min(100%, 600px);
 }
 
+figcaption {
+    color: #ffffff;
+}
+
 .profile-text {
     padding: 30px;
     font-weight: 300;
     width: clamp(45ch, 100%, 75ch);
-}
-
-
-.two-column a:link {
-    color: lightseagreen;
-}
-
-.two-column a:visited {
-    color: seagreen;
 }
 
 /* Spiele-Seiten */
