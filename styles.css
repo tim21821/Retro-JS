@@ -34,6 +34,7 @@ h1 {
     margin-left: 20px;
     margin-bottom: 2em;
     font-family: var(--neon-font), cursive;
+    width: fit-content;
 
     border: currentColor .125em solid;
     padding: 0.25em 1em;
@@ -62,6 +63,8 @@ h1::before {
 h2 {
     color: var(--neon-color3);
     font-family: var(--neon-font), cursive;
+    width: fit-content;
+    height: fit-content;
 
     border: currentColor .125em solid;
     padding: 0.25em 1em;
@@ -242,6 +245,10 @@ footer {
 
 .game_text {
     text-align: center;
+}
+
+.game_text h2 {
+    margin: 25px auto;
 }
 
 .game_text p {
