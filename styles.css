@@ -270,6 +270,10 @@ figure {
     text-align: center;
 }
 
+figure a {
+    color: var(--neon-color4);
+}
+
 figure img {
     width: min(100%, 600px);
 }
@@ -280,13 +284,8 @@ figure img {
     width: clamp(45ch, 100%, 75ch);
 }
 
-
-.two-column a:link {
-    color: lightseagreen;
-}
-
-.two-column a:visited {
-    color: seagreen;
+.profile-text a {
+    color: var(--neon-color4);
 }
 
 /* Spiele-Seiten */
