@@ -66,6 +66,7 @@ h2 {
     font-family: var(--neon-font), cursive;
     width: fit-content;
     margin-left: 20px;
+    height: fit-content;
 
     border: currentColor .125em solid;
     padding: 0.25em 1em;
@@ -248,6 +249,10 @@ footer {
     text-align: center;
 }
 
+.game_text h2 {
+    margin: 25px auto;
+}
+
 .game_text p {
     font-weight: 300;
     width: clamp(45ch, 100%, 75ch);
@@ -267,6 +272,10 @@ figure {
     text-align: center;
 }
 
+figure a {
+    color: var(--neon-color4);
+}
+
 figure img {
     width: min(100%, 600px);
 }
@@ -279,6 +288,10 @@ figcaption {
     padding: 30px;
     font-weight: 300;
     width: clamp(45ch, 100%, 75ch);
+}
+
+.profile-text a {
+    color: var(--neon-color4);
 }
 
 /* Spiele-Seiten */
