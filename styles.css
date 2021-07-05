@@ -308,3 +308,15 @@ figure img {
 .instruction p {
     width: clamp(45ch, 50%, 75ch);
 }
+
+/* Gästebuch */
+
+.guestbook_section {
+    margin-left: 20px;
+}
+
+label {
+    color: white;
+    font: var(--text-font);
+}
+
