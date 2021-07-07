@@ -319,11 +319,33 @@ figure img {
 
 label {
     color: var(--text-color);
-    font: var(--text-font);
+    font-family: var(--text-font);
+}
+
+input {
+    font-family: var(--text-font);
+}
+
+
+textarea {
+    font-family: var(--text-font);
 }
 
 #comment_block {
     color: var(--text-color);
+}
+
+.comment {
+    color: var(--text-color);
+    width: 710px;
+    margin-bottom: 5px;
+
+    border: var(--neon-color4) .125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--neon-color4);
+    box-shadow: inset 0 0 0.5em 0 var(--neon-color4), 0 0 0.5em 0 var(--neon-color4);
 }
 
 .comment_button {
@@ -368,17 +390,14 @@ label {
     position: relative;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    margin-left: 20px;
 }
 
 .answer_button span {
     display: block;
-    padding: 0.25rem 0.75rem 0.25rem 0.75rem;
     position: relative;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--text-color);
-    background-color: grey;
-    z-index: 1;
-    border-radius: 2rem;
     transition: all 250ms;
     cursor: pointer;
 }
@@ -392,15 +411,15 @@ label {
     background-color: transparent;
     padding: 0;
     position: relative;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: 0.35em;
+    margin-bottom: 0.35em;
 }
 
 .send_answer_button span {
     display: block;
     padding: 0.25rem 0.75rem 0.25rem 0.75rem;
     position: relative;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: var(--text-color);
     background-color: grey;
     z-index: 1;
