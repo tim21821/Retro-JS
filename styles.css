@@ -17,6 +17,7 @@
 
 
 /* Master */
+
 html {
     height: 100%;
 }
@@ -325,6 +326,32 @@ label {
     color: var(--text-color);
 }
 
+.comment_button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    position: relative;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.comment_button span {
+    display: block;
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+    position: relative;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: grey;
+    z-index: 1;
+    border-radius: 2rem;
+    transition: all 250ms;
+    cursor: pointer;
+}
+
+.comment_button span:hover {
+    color: var(--neon-color4);
+}
+
 .answer_field {
     display: none;
     transition: 1s;
@@ -332,4 +359,56 @@ label {
 
 .answer_block {
     margin-left: 40px;
+}
+
+.answer_button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    position: relative;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.answer_button span {
+    display: block;
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+    position: relative;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: grey;
+    z-index: 1;
+    border-radius: 2rem;
+    transition: all 250ms;
+    cursor: pointer;
+}
+
+.answer_button span:hover {
+    color: var(--neon-color4);
+}
+
+.send_answer_button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    position: relative;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.send_answer_button span {
+    display: block;
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+    position: relative;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: grey;
+    z-index: 1;
+    border-radius: 2rem;
+    transition: all 250ms;
+    cursor: pointer;
+}
+
+.send_answer_button span:hover {
+    color: var(--neon-color4);
 }
