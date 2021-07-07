@@ -313,10 +313,19 @@ figure img {
 
 .guestbook_section {
     margin-left: 20px;
+    transition: 1s;
 }
 
 label {
-    color: white;
+    color: var(--text-color);
     font: var(--text-font);
 }
 
+#comment_block {
+    color: var(--text-color);
+}
+
+.answer_field {
+    display: none;
+    transition: 1s;
+}

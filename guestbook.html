@@ -6,7 +6,6 @@
     <title>Retro.JS &ndash; Gästebuch</title>
     <link rel="icon" href="images/favicon.ico" sizes="16x16">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="guestbook.js"></script>
 </head>
 
 <body>
@@ -33,10 +32,33 @@
             <label for="comment">Dein Kommentar:</label><br>
             <textarea name="comment" id="comment" cols="90" rows="10" placeholder="Hier kommt der Kommentar hin..."
                 required></textarea><br>
-            <button onclick="make_comment()">Check</button> <br>
-            <div id="comment_out" style="color:white"></div>
+            <button onclick="make_comment()">Absenden</button> <br>
+            <div id="comment_block"></div>
         </section>
+
+        <footer>
+            <div class="left-side" id="left-footer">
+                <div class="footer-entry">
+                    Autor: Tim Mattick
+                </div>
+                <div class="footer-entry">
+                    <a href="mailto:tmattick@smail.uni-koeln.de">tmattick@smail.uni-koeln.de</a>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="footer-entry">
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img
+                            src="https://i.creativecommons.org/l/by/4.0/88x31.png"
+                            alt="Creative Commons Lizenzvertrag"></a><br> Dieses Werk ist lizensiert unter einer <a
+                        rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Namensnennung
+                        4.0
+                        International Lizenz</a>.
+                </div>
+            </div>
+        </footer>
     </div>
+    <script src="guestbook.js"></script>
 </body>
 
 </html>
