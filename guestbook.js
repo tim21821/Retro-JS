@@ -22,7 +22,5 @@ function construct_output(comment, name) {
 }
 
 function display_answer_block(element) {
-    const ID = element.parentNode.id;
-    console.log(ID);
     element.parentNode.getElementsByClassName("answer_field")[0].style.display = "block";
 }
