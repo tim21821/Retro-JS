@@ -329,3 +329,7 @@ label {
     display: none;
     transition: 1s;
 }
+
+.answer_block {
+    margin-left: 40px;
+}
