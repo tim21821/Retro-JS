@@ -380,7 +380,7 @@ textarea {
 }
 
 .answer_block {
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 .answer_button {
@@ -400,10 +400,12 @@ textarea {
     color: var(--text-color);
     transition: all 250ms;
     cursor: pointer;
+    text-decoration: var(--text-color) underline;
 }
 
 .answer_button span:hover {
     color: var(--neon-color4);
+    text-decoration: var(--neon-color4) underline;
 }
 
 .send_answer_button {
@@ -429,5 +431,15 @@ textarea {
 }
 
 .send_answer_button span:hover {
+    color: var(--neon-color4);
+}
+
+/* Impressum */
+
+.impressum {
+    margin-left: 20px;
+}
+
+.impressum a {
     color: var(--neon-color4);
 }
