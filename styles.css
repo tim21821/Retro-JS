@@ -17,6 +17,7 @@
 
 
 /* Master */
+
 html {
     height: 100%;
 }
@@ -307,4 +308,138 @@ figure img {
 
 .instruction p {
     width: clamp(45ch, 50%, 75ch);
+}
+
+/* Gästebuch */
+
+.guestbook_section {
+    margin-left: 20px;
+    transition: 1s;
+}
+
+label {
+    color: var(--text-color);
+    font-family: var(--text-font);
+}
+
+input {
+    font-family: var(--text-font);
+}
+
+
+textarea {
+    font-family: var(--text-font);
+}
+
+#comment_block {
+    color: var(--text-color);
+}
+
+.comment {
+    color: var(--text-color);
+    width: 710px;
+    margin-bottom: 5px;
+
+    border: var(--neon-color4) .125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--neon-color4);
+    box-shadow: inset 0 0 0.5em 0 var(--neon-color4), 0 0 0.5em 0 var(--neon-color4);
+}
+
+.comment_button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    position: relative;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.comment_button span {
+    display: block;
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+    position: relative;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: grey;
+    z-index: 1;
+    border-radius: 2rem;
+    transition: all 250ms;
+    cursor: pointer;
+}
+
+.comment_button span:hover {
+    color: var(--neon-color4);
+}
+
+.answer_field {
+    display: none;
+    transition: 1s;
+}
+
+.answer_block {
+    margin-left: 20px;
+}
+
+.answer_button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    position: relative;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 20px;
+}
+
+.answer_button span {
+    display: block;
+    position: relative;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    transition: all 250ms;
+    cursor: pointer;
+    text-decoration: var(--text-color) underline;
+}
+
+.answer_button span:hover {
+    color: var(--neon-color4);
+    text-decoration: var(--neon-color4) underline;
+}
+
+.send_answer_button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    position: relative;
+    margin-top: 0.35em;
+    margin-bottom: 0.35em;
+}
+
+.send_answer_button span {
+    display: block;
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+    position: relative;
+    font-size: 0.8rem;
+    color: var(--text-color);
+    background-color: grey;
+    z-index: 1;
+    border-radius: 2rem;
+    transition: all 250ms;
+    cursor: pointer;
+}
+
+.send_answer_button span:hover {
+    color: var(--neon-color4);
+}
+
+/* Impressum */
+
+.impressum {
+    margin-left: 20px;
+}
+
+.impressum a {
+    color: var(--neon-color4);
 }
