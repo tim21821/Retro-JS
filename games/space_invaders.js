@@ -21,11 +21,19 @@ var shot_counter;
 let enemy_img;
 let ship_img;
 
+/**
+ * Lädt vor Spielstart die Schiffbilder
+ * @requires module:p5.js
+ */
 function preload() {
     enemy_img = loadImage('games/assets/SI_enemy_green.png');
     ship_img = loadImage('games/assets/SI_ship.png');
 }
 
+/**
+ * Wird vor Spielstart aufgerufen
+ * @requires module:p5.js
+ */
 function setup() {
     createCanvas(WIDTH, HEIGHT);
     player = new Player();
@@ -40,6 +48,10 @@ function setup() {
     shot_counter = COOLDOWN;
 }
 
+/**
+ * Wird auf jedem Frame aufgerufen
+ * @requires module:p5.js
+ */
 function draw() {
     enemy_move_counter += 1;
     background(0);
@@ -93,6 +105,9 @@ function draw() {
     text(String(points), 10, 30);
 }
 
+/**
+ * Schießt bei Druck der Leertaste
+ */
 function keyPressed() {
     if (keyCode === 32 && shot_counter >= COOLDOWN) {
         player.shoot();
@@ -100,37 +115,62 @@ function keyPressed() {
     }
 }
 
+/**
+ * Klasse stellt Spielercharakter bereit
+*/
 function Player() {
     this.x = Math.floor((WIDTH - PLAYER_WIDTH) / 2);
     this.y = HEIGHT - PLAYER_HEIGHT - 10;
 
+    /**
+     * Zeichnet den Spielercharakter
+     */
     this.show = function () {
         image(ship_img, this.x, this.y, PLAYER_WIDTH, PLAYER_HEIGHT);
     }
 
+    /**
+     * Generiert ein Projektil und pusht es in bullet_list
+     */
     this.shoot = function () {
         bullet = new Bullet(this.x + Math.floor(PLAYER_WIDTH / 2), this.y);
         bullet_list.push(bullet);
     }
-
+    /** 
+    * Bewegt den Spielercharakter in x-Richtung
+    * @param {number} dir - Orientierung in x-Richtung (-1, 1)
+    */
     this.move = function (dir) {
         player.x += dir * PLAYER_SPEED;
     }
 }
 
+/**
+ * Klasse stellt Projektil bereit
+*/
 function Bullet(x, y) {
     this.x = x;
     this.y = y;
 
+    /**
+     * Zeichnet das Projektil
+     */
     this.show = function () {
         fill(255);
         circle(this.x, this.y, BULLET_DIAMETER);
     }
 
+    /**
+     * Bewegt das Projektil nach oben
+     */
     this.move = function () {
         this.y -= BULLET_SPEED;
     }
-
+    /** 
+    * Bestimmt, ob das Projektil einen Gegner trifft
+    * @param {object} enemy - Ein Gegner-Objekt
+    * @return {boolean} true, wenn enemy getroffen wird, sonst false
+    */
     this.hit = function (enemy) {
         if (this.x + Math.floor(BULLET_DIAMETER / 2) >= enemy.x && this.x - Math.floor(BULLET_DIAMETER / 2) <= enemy.x + ENEMY_WIDTH) {
             if (this.y - Math.floor(BULLET_DIAMETER / 2) <= enemy.y + ENEMY_HEIGHT && this.y + Math.floor(BULLET_DIAMETER / 2) >= enemy.y) {
@@ -141,19 +181,33 @@ function Bullet(x, y) {
     }
 }
 
+/**
+ * Klasse stellt Gegner bereit
+ * @param {number} x - x-Position des Gegners
+ * @param {number} y - y-Position des Gegners
+*/
 function Enemy(x, y) {
     this.x = x;
     this.y = y + Y_OFFSET;
     this.dir = 1;
 
+    /**
+     * Zeichnet den Gegner
+     */
     this.show = function () {
         image(enemy_img, this.x, this.y);
     }
 
+    /**
+     * Bewegt den Gegner in x-Richtung
+     */
     this.move = function () {
         this.x += this.dir * ENEMY_SPEED;
     }
 
+    /**
+     * Bewegt den Gegner nach unten
+     */
     this.move_down = function () {
         this.y += ENEMY_HEIGHT;
     }

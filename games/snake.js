@@ -1,6 +1,10 @@
 const BLOCK_SIZE = 20;
 const SIZE = 600;
 
+/** 
+* Wird vor Spielstart aufgerufen
+* @requires module:p5.js
+*/
 function setup() {
     createCanvas(SIZE, SIZE);
     snake = new Snake();
@@ -10,6 +14,10 @@ function setup() {
     frameRate(10);
 }
 
+/**
+ * Wird auf jedem Frame aufgerufen
+ * @requires module:p5.js
+ */
 function draw() {
     background(51);
     snake.death();
@@ -26,6 +34,9 @@ function draw() {
     apple.show();
 }
 
+/**
+ * Nimmt Tasten-Drücke auf und ändert die Bewegungsrichtung der Schlange
+ */
 function keyPressed() {
     if (keyCode === UP_ARROW && snake.y_vel != 1) {
         snake.dir(0, -1);
@@ -38,6 +49,9 @@ function keyPressed() {
     }
 }
 
+/**
+ * Klasse stellt Schlange bereit
+*/
 function Snake() {
     this.x = 0;
     this.y = 0;
@@ -46,6 +60,9 @@ function Snake() {
     this.length = 0;
     this.tail = [];
 
+    /**
+     * Bewegt den Schlangenkopf in die aktuelle Bewegungsrichtung, aktualisiert den Schwanz
+     */
     this.update = function () {
         for (var i = 0; i < this.tail.length - 1; i++) {
             this.tail[i] = this.tail[i + 1];
@@ -62,6 +79,9 @@ function Snake() {
         }
     }
 
+    /**
+     * Zeichnet die Schlange
+     */
     this.show = function () {
         fill(color("white"));
         for (var i = 0; i < this.length; i++) {
@@ -70,12 +90,21 @@ function Snake() {
         rect(this.x, this.y, BLOCK_SIZE, BLOCK_SIZE);
     }
 
+    /**
+     * Aktualisiert die Bewegungsrichtung der Schlange
+     * @param {number} x - Orientierung in x-Richtung (-1, 0, 1) 
+     * @param {number} y - Orientierung in y-Richtung (-1, 0, 1) 
+     */
     this.dir = function (x, y) {
         this.x_vel = x;
         this.y_vel = y;
     }
 
-    // Schlange an Position des Apfels
+    /** 
+    * Bestimmt, ob die Schlange an der Position pos ist
+    * @param {vector} pos - Position des Apfels
+    * @return {boolean} true, wenn Schlange an Position des Apfels, sonst false
+    */
     this.eat = function (pos) {
         var d = dist(this.x, this.y, pos.x, pos.y);
         if (d < 1) {
@@ -86,7 +115,9 @@ function Snake() {
         }
     }
 
-    // Schlange kollidiert mit sich selbst -> Länge zurücksetzen
+    /**
+     * Setzt die Länge der Schlange auf 1 zurück, wenn die Schlange mit sich selbst kollidiert
+     */
     this.death = function () {
         for (var i = 0; i < this.tail.length; i++) {
             var pos = this.tail[i]
@@ -99,11 +130,18 @@ function Snake() {
         }
     }
 }
-
+/** 
+* Klasse stellt den Apfel bereit
+* @param {number} x - x-Position des Apfels
+* @param {number} y - y-Position des Apfels
+*/
 function Apple(x, y) {
     this.x = x;
     this.y = y;
 
+    /**
+     * Zeichnet den Apfel
+     */
     this.show = function () {
         fill(color("red"));
         rect(this.x, this.y, BLOCK_SIZE, BLOCK_SIZE);

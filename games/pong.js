@@ -12,14 +12,22 @@ var paddle_speed = 5;
 var left_paddle;
 var right_paddle;
 var left_score = 0;
-var right_score = 0;
+var right_score = 0
 
+/** 
+* Wird vor Spielstart aufgerufen
+* @requires module:p5.js
+*/
 function setup() {
     createCanvas(WIDTH, HEIGHT);
     left_paddle = new Paddle(10, (HEIGHT - PADDLE_HEIGHT) / 2);
     right_paddle = new Paddle(WIDTH - 10 - PADDLE_WIDTH, (HEIGHT - PADDLE_HEIGHT) / 2);
 }
 
+/**
+ * Wird auf jedem Frame aufgerufen
+ * @requires module:p5.js
+ */
 function draw() {
     background(0);
 
@@ -78,22 +86,37 @@ function draw() {
     text(String(left_score), Math.floor(WIDTH / 4), 40);
     text(String(right_score), Math.floor(WIDTH / 4) * 3, 40);
 }
-
+/** 
+* Klasse, die die Schläger bereitsstellt
+* @param {number} x - x-Position des Schlägers
+* @param {number} y - y-Position des Schlägers
+*/
 function Paddle(x, y) {
     this.x = x;
     this.y = y;
 
+    /**
+     * Zeichnet den Schläger
+     */
     this.show = function () {
         fill(255);
         rect(this.x, this.y, PADDLE_WIDTH, PADDLE_HEIGHT);
     }
 
+    /**
+     * Bewegt den Schläger nach oben oder unten
+     * @param {number} y - Bewegungsrichtung (-1 / +1) in y
+     */
     this.move = function (y) {
         this.y += y * paddle_speed;
     }
 }
-
-// Berechne Rückschlagwinkel des Balls
+/** 
+* Berechnet den Rückprallwinkel des Balles
+* @param {number} paddle_y - y-Position des Schlägers
+* @param {number} ball_y - y-Position des Balls
+* @return {number} Rückprallwinkel zwischen -pi/2 und +pi/2
+*/
 function angle(paddle_y, ball_y) {
     const MAX_ANGLE = PI / 2;
     var relative_y = paddle_y + PADDLE_HEIGHT / 2 - ball_y;
