@@ -12,7 +12,16 @@ var paddle_speed = 5;
 var left_paddle;
 var right_paddle;
 var left_score = 0;
-var right_score = 0
+var right_score = 0;
+let my_font;
+
+/**
+ * Lädt vor Spielstart die Schrift.
+ * @requires module:p5.js
+ */
+function preload() {
+    my_font = loadFont('games/assets/press-start-2p/PressStart2P-Regular.ttf');
+}
 
 /** 
 * Wird vor Spielstart aufgerufen
@@ -82,7 +91,7 @@ function draw() {
 
     left_paddle.show();
     right_paddle.show();
-    textFont('Helvetica', 30);
+    textFont(my_font, 30);
     text(String(left_score), Math.floor(WIDTH / 4), 40);
     text(String(right_score), Math.floor(WIDTH / 4) * 3, 40);
 }

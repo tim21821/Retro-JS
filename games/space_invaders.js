@@ -20,6 +20,7 @@ var enemy_move_counter;
 var shot_counter;
 let enemy_img;
 let ship_img;
+let my_font;
 
 /**
  * Lädt vor Spielstart die Schiffbilder
@@ -28,6 +29,7 @@ let ship_img;
 function preload() {
     enemy_img = loadImage('games/assets/SI_enemy_green.png');
     ship_img = loadImage('games/assets/SI_ship.png');
+    my_font = loadFont('games/assets/press-start-2p/PressStart2P-Regular.ttf');
 }
 
 /**
@@ -101,7 +103,7 @@ function draw() {
         }
     }
 
-    textFont('Helvetica', 30);
+    textFont(my_font, 30);
     text(String(points), 10, 30);
 }
 
