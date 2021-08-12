@@ -105,6 +105,15 @@ function draw() {
 
     textFont(my_font, 30);
     text(String(points), 10, 30);
+
+    for (var i in enemy_list) {
+        if (enemy_list[i].y >= HEIGHT) {
+            textFont(my_font, 40);
+            textAlign(CENTER, CENTER);
+            text("Game over!", WIDTH / 2 - 80, HEIGHT / 2 - 20);
+        }
+    }
+
 }
 
 /**
