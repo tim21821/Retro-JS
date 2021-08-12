@@ -214,6 +214,11 @@ footer {
     background-repeat: no-repeat;
 }
 
+.img-background:hover {
+    transition: 1s;
+    filter: brightness(10%);
+}
+
 #space-invaders-bg {
     background-image: url(images/Space_Invaders.png);
 }
@@ -237,11 +242,6 @@ footer {
 .logo img {
     width: 50%;
     margin-bottom: auto;
-}
-
-.img-darken {
-    transition: 1s;
-    filter: brightness(10%);
 }
 
 .game_text {
